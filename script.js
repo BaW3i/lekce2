@@ -22,6 +22,36 @@ const monthlyEarningTotal = (numberOfStudents*ticketStudent*numberOfPlayPerMonth
 console.log(Math.floor(monthlyEarningTotal));
 
 
+// chat gpt suggested refactoring
+
+// Constants for theatre settings
+const numberOfPeople1 = 174;
+const numberOfPlayPerMonth1 = 15;
+const ticketAdult1 = 12;
+const studentDiscount1 = 0.65;   // Students pay 65% of adult ticket price
+const studentPercentage1 = 0.4;  // 40% of the audience are students
+
+// Function to calculate total monthly earnings
+function calculateMonthlyEarnings(people, playsPerMonth1, adultTicketPrice1, studentPercentage1, studentDiscount1) {
+    // Calculate the number of students and adults
+    const numberOfStudents1 = Math.floor(people * studentPercentage1);
+    const numberOfAdults1 = people - numberOfStudents1;
+
+    // Calculate student and adult ticket prices
+    const ticketStudent1 = adultTicketPrice1 * studentDiscount1;
+
+    // Calculate total earnings
+    const totalEarnings1 = (numberOfAdults1 * adultTicketPrice1 + numberOfStudents1 * ticketStudent1) * playsPerMonth1;
+    
+    return totalEarnings1;
+}
+
+// Call the function to calculate monthly earnings
+const monthlyEarnings1 = calculateMonthlyEarnings(numberOfPeople1, numberOfPlayPerMonth1, ticketAdult1, studentPercentage1, studentDiscount1);
+
+console.log(`Total monthly earnings: $${Math.floor(monthlyEarnings1)}`);
+
+
 /* Vymyslete, jak použít funkci Math.random a různé zaokrouhlovací funkce probírané v této lekci k simulování hodu klasickou šestistěnnou kostkou. 
 S použitím vhodných funkcí sestavte výraz, který vygeneruje náhodné celé číslo mezi 1 a 6.
 
