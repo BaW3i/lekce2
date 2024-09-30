@@ -19,4 +19,4 @@ let studentTicket = CostTicket*0.65;
 let studentBrutto = studentTicket*numStudents*numOfPlaysMonth;
 let newBrutto = studentBrutto + noStudentBrutto;
 
-console.log(Math.floor(newBrutto))
+console.log(Math.floor(newBrutto));
