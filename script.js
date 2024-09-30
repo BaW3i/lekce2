@@ -27,6 +27,28 @@ S použitím vhodných funkcí sestavte výraz, který vygeneruje náhodné cel�
 
 Zamyslete se nad tím, zda vámi vytvořený výraz generuje všechna čísla skutečně se stejnou 
 pravděpodobností. Vemte v úvahu, že funkce Math.random generuje náhodná čísla mezi 0 (včetně) a 1 (vyjma). Je tedy malinká pravěpodobnost, 
-že občas padne přesně číslo 0. Naopak číslo 1 padnout nemůže. */
+že občas padne přesně číslo 0. Naopak číslo 1 padnout nemůže.
 
+*/
 
+let myNumber = Math.floor(Math.random()*10);
+
+const  diceThrow = (myNumber) => {
+
+    if (myNumber >= 1 && myNumber <= 6) {
+        return console.log(myNumber);
+    } else {
+        console.log('Invalid input');
+    };
+    }
+
+diceThrow(myNumber);
+
+//code with cleaner structure:
+
+const diceThrowFaster = () => {
+    const myNumber = Math.floor(Math.random() * 6) + 1;  // Generates a number between 1 and 6
+    console.log(myNumber);
+};
+
+diceThrowFaster();  
